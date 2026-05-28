@@ -1,0 +1,126 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* App custom styles for Todos */
+.navbar-brand {
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+
+.todo-card {
+  transition: transform 160ms ease, box-shadow 160ms ease;
+  cursor: default;
+}
+.todo-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(20,20,40,0.12);
+}
+.todo-title {
+  font-weight: 600;
+}
+.todo-desc {
+  color: #495057;
+}
+
+.form-control:focus {
+  border-color: #6dd3b0;
+  box-shadow: 0 0 0 0.15rem rgba(109,211,176,0.25);
+}
+
+.btn-outline-danger {
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+.btn-outline-danger:hover {
+  transform: translateY(-2px);
+}
+
+.btn-success {
+  box-shadow: 0 6px 18px rgba(13,110,253,0.08);
+}
+
+/* subtle page entrance */
+.container > .card, .container > form, .container > h3 {
+  animation: fadeUp 320ms ease both;
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Home/About specific */
+.home-hero .display-6 {
+  font-weight: 700;
+  color: #0b7285;
+}
+.about h2 {
+  color: #0b7285;
+}
+
+.nav-link.active {
+  font-weight: 600;
+  color: #0b7285 !important;
+}
+
+/* Completion styles */
+.todo-card.completed {
+  background: linear-gradient(90deg, rgba(235,248,244,1) 0%, rgba(250,255,252,1) 100%);
+  border-left: 4px solid #6dd3b0;
+  opacity: 0.95;
+}
+.todo-card.completed .todo-title {
+  text-decoration: line-through;
+  color: #6c757d;
+}
+
+.badge {
+  font-weight: 600;
+}
+
+.btn-group .btn {
+  min-width: 88px;
+}
+
+/* subtle focus and hover for cards */
+.todo-card { border: 1px solid rgba(0,0,0,0.06); }
+.todo-card:hover { transform: translateY(-6px); box-shadow: 0 12px 30px rgba(20,20,40,0.08); }
+
+/* responsive tweaks */
+@media (max-width: 576px) {
+  .btn-group .btn { min-width: 64px; font-size: 12px; }
+}
